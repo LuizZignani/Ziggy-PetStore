@@ -4,38 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/auxiliar.css">
+    <link rel="shortcut icon" href="/Img/Z_BrowserIco.ico" type="image/x-icon">
+    <script src="/js/Acessibilidade.js"></script>
+    <script src="./js/envioFormulario.js"></script>
     <title>Ziggy - Dê tudo e mais para seu pet!</title>
 </head>
 
+
 <body>
 
-    <header>
-        <section>
-            <div>
+    <header class="sticky-top bg-light  border-bottom border-2 border-gray">
+        <section class="container d-flex">
+            <div class="d-flex flex-wrap justify-content-left py-3 mb-0">
                 <a href="./index.html">
-                    <img src="./Img/Z_Logo.png" alt="Logo Ziggy" width=80px height=60px>
+                    <img class="logo_ziggy" src="./Img/Z_Logo.png" alt="Logo Ziggy" width=80px height=60px>
                 </a>
             </div>
 
-            <p>Dê de tudo e mais um pouco para o seu pet!</p>
+            <!-- <p class="lead">Dê de tudo e mais um pouco para o seu pet!</p> -->
 
-            <nav>
-                <ul>
-                    <li><a href="./acessorios.html">Acessórios</a></li>
-                    <li><a href="./produtos.html">Produtos</a></li>
-                    <li><a href="./higiene.html">Higiene</a></li>
-                    <li><strong>Serviços</strong></li>
+            <nav class="d-flex flex-wrap justify-content-center py-4 mb-0">
+                <ul class="nav nav-pills justify-content-center">
+                    <li class="nav-item" tabindex="0"><a href="./acessorios.html" class="nav-link">Acessórios</a>
+                    </li>
+                    <li class="nav-item" tabindex="0"><a href="./produtos.html" class="nav-link">Produtos</a>
+                    </li>
+                    <li class="nav-item" tabindex="0"><a href="./higiene.html" class="nav-link">Higiene</a></li>
+                    <li class="nav-item" tabindex="0"><a href="./servicos.html" class="nav-link active">Serviços</a>
+                    </li>
                 </ul>
             </nav>
         </section>
     </header>
 
-    <section>
+    <!--Botão para ir para o topo da página. Está aqui em cima para ser prioridade quando apertar o botão TAB-->
+    <div class="subir-topo">
+        <button tabindex="0" onclick="subirPagina()" id="botaoSubir" title="Ir para o topo"
+            style="display: none; border-width: 0px; background-color: transparent;">
+            <img src="./Img/Icones/subir.png" alt="icone de seta para cima, subir para o topo da página" width=60px
+                height=60px>
+        </button>
+    </div>
+
+
+    <section class="container justify-content-center text-center pt-2 fundo-oferta">
         <h3>Oferta de boas-vindas!</h3>
         <p>Ganhe <strong>25% de desconto</strong> no primeiro serviço de banho e tosa!</p>
     </section>
 
-    <section>
+    <section class="container justify-content-left text-left">
         <div>
             <h2>Banho e tosa especializado para seu pet!</h2>
             <p>Nosso banho e tosa é devidamente preparado pelos nossos especialistas e profissionais veterinários para o
@@ -69,21 +88,13 @@
 
         <div>
             <h4>Opções adicionais (depende do tipo de pet)</h4>
-            <ul>
+            <ul class="d-flex">
                 <li><strong>Tratamento de pelagem</strong></li>
-                <ul>
+                <ul class="d-flex">
                     <li>Seu pet terá um tratamento de pelagem, com orientações de nossos especialistas veterinários.
                         Trataremos com a pelagem de seu pet, deixando-o ricos em vitaminas, proporcionando pelos sedosos
                         naturalmente, e eliminando pulgas ou carrapatos que tenha.</li>
                     <li><strong>+ R$60,00</strong></li>
-                </ul>
-                <li><strong>Tosagem customizada</strong></li>
-                <ul>
-                    <li>Gostaria que seu pet tenha um corte customizado, como os desenhos que os barbeiros fazem no
-                        cabelo? Com o seu pet, você também pode pedir! Você pode escolher qual desenho queira que seja
-                        feito no seu pet.</li>
-                    <li><strong>+ R$30,00</strong></li>
-                    <li><em>Disponível apenas para cachorros.</em></li>
                 </ul>
                 <li><strong>Escolha de perfume</strong></li>
                 <ul>
@@ -102,18 +113,152 @@
         </div>
         <div>
             <h4>Telebusca</h4>
-            <p>Possuimos serviço de telebusca do seu pet a domicílio, para não se preocupar de trazer seu pet até nós! Valores da telebusca variam de acordo com seu
+            <p>Possuimos serviço de telebusca do seu pet a domicílio, para não se preocupar de trazer seu pet até nós!
+                Valores da telebusca variam de acordo com seu
                 endereço.</p>
         </div>
         <div>
             <h4>Agendamento</h4>
             <p>Para fazer o seu agendamento do serviço de banho e tosa, com telebusca ou entrega do pet no local, é
                 preciso escolher o dia e o horário para o serviço.</p>
-            <p>O agendamento do serviço pode ser feito aqui no site, por mensagem via whatsapp ou por ligação no nosso número.</p>
+            <p>O agendamento do serviço pode ser feito aqui no site, por mensagem via whatsapp ou por ligação no nosso
+                número.</p>
         </div>
     </section>
 
-    <section>
+    <div class="formulario-cadastro container justify-content-left text-left bg-light">
+        <form id="formularioCadastro" action= "javascript:enviarFormularioParaEmailCadastrado()" method="POST">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label>Nome:</label>
+                <input type="text" name="Nome" placeholder="Nome Completo" class="class.class_input_name" required>
+                <label>Email:</label>
+                <input type="email" name="Email" placeholder="Digite o Email" class="class_input_email" required>
+                <label>CPF:</label>
+                <input type="text" name="CPF" placeholder="Digite o CPF" pattern="[0-9]{11}" required>
+                <label>Data de Nascimento:</label>
+                <input type="text" name="Nascimento" placeholder="DDMMAAAA" pattern="[0-9]{8}" required>
+                <label>Masculino</label>
+                <input type="radio" volume="masculino">
+                <label>Feminino</label>
+                <input type="radio" volume="feminino">
+                <br><br>
+                <label>Estado Civil:</label>
+                <select name="EstadoCivil">
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viuvo">Viuvo(a)</option>
+                    <option value="união estável">União Estável</option>
+                    <option value="outro">Outros</option>
+                </select>
+                <label>Renda Mensal (opcional):</label>
+                <input type="text" name="rendamensal" placeholder="Digite a renda">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Endereço</legend>
+                <label>Logradouro:</label>
+                <input type="text" name="logradouro" placeholder="Nome da rua" class="class_input_name" required>
+                <label>Número:</label>
+                <input type="text" name="numero" placeholder="Número" required>
+                <label>Complemento:</label>
+                <input type="text" name="Complemento" placeholder="Apto, Bloco, Prédio">
+                <br>
+                <br>
+                <label>Estado:</label>
+                <select name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="GO">Goias</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RR">Roraima</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+                <label>Cidade:</label>
+                <input type="text" name="cidade" placeholder="Informe a cidade" required>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Dados do Pet</legend>
+                <label>Nome do pet:</label>
+                <input type="text" name="nomepet" placeholder="Nome do pet" required>
+                <label>Raça:</label>
+                <select name="raça" id="">
+                    <option value="">Selecione a raça</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="coelho">Coelho</option>
+                    <option value="hamster">Hamster</option>
+                    <option value="rato">Rato</option>
+                    <option value="porquinho-da-india">Porquinho da India</option>
+                    <option value="tartaruga">Tartaruga</option>
+                </select>
+                <label>Data de nascimento</label>
+                <input type="text" name="nascimento_pet" placeholder="DDMMAAAA" pattern="[0-9]{8}">
+                <label>Sexo:</label>
+                <select name="sexopet">
+                    <option value="pet_macho">Macho</option>
+                    <option value="pet_femea">Fêmea</option>
+                </select>
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Agendar</legend>
+                <label>Data</label>
+                <input type="datetime-local">
+                <label>Tipo de serviço:</label>
+                <select name="tipo_servico">
+                    <option value="banho e tosa">Banho e Tosa</option>
+                    <option value="banho">Banho</option>
+                    <option value="tosa">Tosa</option>
+                </select>
+                <br>
+                <label>Serviços adicionais:</label>
+                <div class="d-flex flex-column">
+                    <label><input type="checkbox" name="servico_adicional" value="tratamento_pelagem"> Tratamento de
+                        pelagem</label>
+                    <label><input type="checkbox" name="servico_adicional" value="cuidados_bocais"> Cuidados bocais
+                        essenciais</label>
+                </div>
+                <label>Escolha de perfume</label>
+                <select name="perfume_escolha">
+                    <option value="Normal">Normal</option>
+                    <option value="lavanda">Lavanda</option>
+                    <option value="baunilha">Baunilha</option>
+                    <option value="rosa">Rosa</option>
+                    <option value="laranja">Laranja</option>
+                    <option value="uva">Uva</option>
+                </select>
+            </fieldset>
+            <center>
+                <label>Envio dos dados cadastrais</label>
+                <input id="formSubmit" class="class_botao_enviar" type="submit">
+            </center>
+            <br><br>
+        </form>
+    </div>
+
+    <section class="container text-left">
         <div>
             <h2>Tipos de pets aceitos</h2>
             <ul>
@@ -128,24 +273,24 @@
         </div>
     </section>
 
-    <footer>
-        <section>
-            <section>
+    <footer class="footer-cor">
+        <section class="container d-flex justify-content-center text-center py-3 mb-3">
+            <section class="container">
                 <h2>Certificação</h2>
                 <div>
-                    <div>
+                    <div class="container">
                         <a href="https://www.siteblindado.com/">
                             <img src="./Img/Certificados/cert_SiteBlindado.png" alt="Certificado Site Blindado"
                                 width=140px height=30px>
                         </a>
                     </div>
-                    <div>
+                    <div class="container">
                         <a href="https://safebrowsing.google.com/">
                             <img src="./Img/Certificados/cert_SiteSeguro.png" alt="Certificado Site Seguro" width=140px
                                 height=40px>
                         </a>
                     </div>
-                    <div>
+                    <div class="container">
                         <a href="https://www.cloudflare.com/pt-br/application-services/products/ssl/">
                             <img src="./Img/Certificados/cert_SSL.png" alt="Certificao SSL" width=80px height=80px>
                         </a>
@@ -153,53 +298,57 @@
 
                 </div>
             </section>
-            <section>
+            <section class="container">
                 <h2>Formas de pagamento</h2>
-                <div>
-                    <div>
+                <div class="container d-flex justify-content-center">
+                    <div class="container">
                         <img src="./Img/BandeirasCartao/Band_Visa.png" alt="Logo Visa" width=50px height=30px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/BandeirasCartao/Band_Mastercard.png" alt="Logo Mastercard" width=70px
                             height=30px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/BandeirasCartao/Band_Elo.png" alt="Logo Elo" width=80px height=30px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/BandeirasCartao/Band_Pix.png" alt="Logo Pix" width=80px height=30px>
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="container">
                 <h2>Redes Sociais</h2>
-                <div>
-                    <div>
+                <div class="container d-flex justify-content-center">
+                    <div class="container">
                         <img src="./Img/RedesSociais/logo_Instagram.png" alt="Logo Instagram" width=50px height=50px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/RedesSociais/logo_Facebook.png" alt="Logo Facebook" width=50px height=50px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/RedesSociais/logo_LinkedIn.png" alt="Logo LinkedIn" width=50px height=50px>
                     </div>
                 </div>
             </section>
         </section>
-        <div>
-            <p>Whatsapp: <a href="tel:+5551985694201">(51) 98569-4201</a></p>
-            <p>Telefone: <a href="tel:08007214852">0800 721 4852</a></p>
-            <p>Email: <a href="mailto:atendimento.ziggy@ziggy.com.br">atendimento.ziggy@ziggy.com.br</a></p>
+        <section
+            class="container container-fluid d-flex justify-content-center text-center border-top border-2 border-gray pt-5">
+            <div class="col-lg-4 col-sm-12">
+                <p>Whatsapp: <a href="tel:+5551985694201">(51) 98569-4201</a></p>
+                <p>Telefone: <a href="tel:08007214852">0800 721 4852</a></p>
+                <p>Email: <a href="mailto:atendimento.ziggy@ziggy.com.br">atendimento.ziggy@ziggy.com.br</a></p>
+            </div>
+            <div class="col-md-6">
+                <p>E-commerce e serviços para pets ZIGGY Ltda. CNPJ: 12.345.678/0001-90 - Sede: Rua General Gato,
+                    7200 -
+                    Porto Alegre - Rio Grande do Sul - CEP: 91320-123</p>
+                <p>Copyright © 2026 E-commerce e serviços para pets ZIGGY Ltda. Todos os direitos reservados.</p>
+            </div>
+        </section>
+        <div class="container justify-content-center text-center mt-5">
+            <p class="m-0"> Desenvolvido por Luiz Zignani</p>
         </div>
-        <div>
-            <p>E-commerce e serviços para pets ZIGGY Ltda. CNPJ: 12.345.678/0001-90 - Sede: Rua General Gato, 7200 -
-                Porto Alegre - Rio Grande do Sul - CEP: 91320-123</p>
-            <p>Copyright © 2026 E-commerce e serviços para pets ZIGGY Ltda. Todos os direitos reservados. Desenvolvido
-                por Luiz Zignani.</p>
-        </div>
-        <p><em>Psst...! Para ir ao menu principal, aperte na logo ZIGGY!</em></p>
     </footer>
-
 </body>
 
 </html>

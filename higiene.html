@@ -4,38 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/auxiliar.css">
+    <link rel="shortcut icon" href="/Img/Z_BrowserIco.ico" type="image/x-icon">
+    <script src="/js/Acessibilidade.js"></script>
     <title>Ziggy - Dê tudo e mais para seu pet!</title>
 </head>
 
 <body>
 
-    <header>
-        <section>
-            <div>
+    <header class="sticky-top bg-light  border-bottom border-2 border-gray">
+        <section class="container d-flex">
+            <div class="d-flex flex-wrap justify-content-left py-3 mb-0">
                 <a href="./index.html">
-                    <img src="./Img/Z_Logo.png" alt="Logo Ziggy" width=80px height=60px>
+                    <img class="logo_ziggy" src="./Img/Z_Logo.png" alt="Logo Ziggy" width=80px height=60px>
                 </a>
             </div>
 
-            <p>Dê de tudo e mais um pouco para o seu pet!</p>
+            <!-- <p class="lead">Dê de tudo e mais um pouco para o seu pet!</p> -->
 
-            <nav>
-                <ul>
-                    <li><a href="./acessorios.html">Acessórios</a></li>
-                    <li><a href="./produtos.html">Produtos</a></li>
-                    <li><strong>Higiene</strong></li>
-                    <li><a href="./servicos.html">Serviços</a></li>
+            <nav class="d-flex flex-wrap justify-content-center py-4 mb-0">
+                <ul class="nav nav-pills justify-content-center">
+                    <li class="nav-item" tabindex="0"><a href="./acessorios.html" class="nav-link">Acessórios</a>
+                    </li>
+                    <li class="nav-item" tabindex="0"><a href="./produtos.html" class="nav-link">Produtos</a>
+                    </li>
+                    <li class="nav-item" tabindex="0"><a href="./higiene.html" class="nav-link active">Higiene</a></li>
+                    <li class="nav-item" tabindex="0"><a href="./servicos.html" class="nav-link">Serviços</a></li>
                 </ul>
             </nav>
         </section>
     </header>
 
-    <section>
-        <div>
+    <!--Botão para ir para o topo da página. Está aqui em cima para ser prioridade quando apertar o botão TAB-->
+    <div class="subir-topo">
+        <button tabindex="0" onclick="subirPagina()" id="botaoSubir" title="Ir para o topo"
+            style="display: none; border-width: 0px; background-color: transparent;">
+            <img src="./Img/Icones/subir.png" alt="icone de seta para cima, subir para o topo da página" width=60px
+                height=60px>
+        </button>
+    </div>
+
+
+    <section class="container justify-content-center text-center pt-2 fundo-oferta">
+        <h3>Oferta de boas-vindas!</h3>
+        <p>Ganhe <strong>25% de desconto</strong> no primeiro serviço de banho e tosa!</p>
+    </section>
+
+    <section class="container produtos-em-destaque">
+        <div class="py-5">
             <h2>Produtos de higiene em destaque</h2>
-            <div>
-                <div>
-                    <h3>Petisco Pedigree Dentastix adulto cachorros 3 unidades 77g</h3>
+            <div class="d-flex justify-content-evenly">
+                <div class="border px-5 mx-5 justify-content-center text-center nav-produto">
+                    <h4>Petisco Pedigree Dentastix adulto cachorros 3 unidades 77g</h4>
                     <img src="./Img/Mercadoria/Higiene/hig_PetiscoPedigreeDentastixAd.png"
                         alt="Petisco Pedigree Dentastix adulto caes" width=90px height=210px>
                     <h4>R$12,99</h4>
@@ -43,8 +64,8 @@
                         tartato e
                         mal hálito. Contém 3 unidades de uso diário.</p>
                 </div>
-                <div>
-                    <h3>Shampoo Condicionador 2 em 1 Procao Cachorro extrato de amêndoas 500ml</h3>
+                <div class="border px-5 mx-5 justify-content-center text-center nav-produto">
+                    <h4>Shampoo Condicionador 2 em 1 Procao Cachorro extrato de amêndoas 500ml</h4>
                     <img src="./Img/Mercadoria/Higiene/hig_ShampCondProcaoCachorro.png"
                         alt="Shampoo e Condicionador Procao Cachorro 500ml" width=90px height=210px>
                     <h4>R$16,99</h4>
@@ -56,24 +77,24 @@
         </div>
     </section>
 
-    <footer>
-        <section>
-            <section>
+    <footer class="footer-cor">
+        <section class="container d-flex justify-content-center text-center py-3 mb-3">
+            <section class="container">
                 <h2>Certificação</h2>
                 <div>
-                    <div>
+                    <div class="container">
                         <a href="https://www.siteblindado.com/">
                             <img src="./Img/Certificados/cert_SiteBlindado.png" alt="Certificado Site Blindado"
                                 width=140px height=30px>
                         </a>
                     </div>
-                    <div>
+                    <div class="container">
                         <a href="https://safebrowsing.google.com/">
                             <img src="./Img/Certificados/cert_SiteSeguro.png" alt="Certificado Site Seguro" width=140px
                                 height=40px>
                         </a>
                     </div>
-                    <div>
+                    <div class="container">
                         <a href="https://www.cloudflare.com/pt-br/application-services/products/ssl/">
                             <img src="./Img/Certificados/cert_SSL.png" alt="Certificao SSL" width=80px height=80px>
                         </a>
@@ -81,53 +102,57 @@
 
                 </div>
             </section>
-            <section>
+            <section class="container">
                 <h2>Formas de pagamento</h2>
-                <div>
-                    <div>
+                <div class="container d-flex justify-content-center">
+                    <div class="container">
                         <img src="./Img/BandeirasCartao/Band_Visa.png" alt="Logo Visa" width=50px height=30px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/BandeirasCartao/Band_Mastercard.png" alt="Logo Mastercard" width=70px
                             height=30px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/BandeirasCartao/Band_Elo.png" alt="Logo Elo" width=80px height=30px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/BandeirasCartao/Band_Pix.png" alt="Logo Pix" width=80px height=30px>
                     </div>
                 </div>
             </section>
-            <section>
+            <section class="container">
                 <h2>Redes Sociais</h2>
-                <div>
-                    <div>
+                <div class="container d-flex justify-content-center">
+                    <div class="container">
                         <img src="./Img/RedesSociais/logo_Instagram.png" alt="Logo Instagram" width=50px height=50px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/RedesSociais/logo_Facebook.png" alt="Logo Facebook" width=50px height=50px>
                     </div>
-                    <div>
+                    <div class="container">
                         <img src="./Img/RedesSociais/logo_LinkedIn.png" alt="Logo LinkedIn" width=50px height=50px>
                     </div>
                 </div>
             </section>
         </section>
-        <div>
-            <p>Whatsapp: <a href="tel:+5551985694201">(51) 98569-4201</a></p>
-            <p>Telefone: <a href="tel:08007214852">0800 721 4852</a></p>
-            <p>Email: <a href="mailto:atendimento.ziggy@ziggy.com.br">atendimento.ziggy@ziggy.com.br</a></p>
+        <section
+            class="container container-fluid d-flex justify-content-center text-center border-top border-2 border-gray pt-5">
+            <div class="col-lg-4 col-sm-12">
+                <p>Whatsapp: <a href="tel:+5551985694201">(51) 98569-4201</a></p>
+                <p>Telefone: <a href="tel:08007214852">0800 721 4852</a></p>
+                <p>Email: <a href="mailto:atendimento.ziggy@ziggy.com.br">atendimento.ziggy@ziggy.com.br</a></p>
+            </div>
+            <div class="col-md-6">
+                <p>E-commerce e serviços para pets ZIGGY Ltda. CNPJ: 12.345.678/0001-90 - Sede: Rua General Gato,
+                    7200 -
+                    Porto Alegre - Rio Grande do Sul - CEP: 91320-123</p>
+                <p>Copyright © 2026 E-commerce e serviços para pets ZIGGY Ltda. Todos os direitos reservados.</p>
+            </div>
+        </section>
+        <div class="container justify-content-center text-center mt-5">
+            <p class="m-0"> Desenvolvido por Luiz Zignani</p>
         </div>
-        <div>
-            <p>E-commerce e serviços para pets ZIGGY Ltda. CNPJ: 12.345.678/0001-90 - Sede: Rua General Gato, 7200 -
-                Porto Alegre - Rio Grande do Sul - CEP: 91320-123</p>
-            <p>Copyright © 2026 E-commerce e serviços para pets ZIGGY Ltda. Todos os direitos reservados. Desenvolvido
-                por Luiz Zignani.</p>
-        </div>
-        <p><em>Psst...! Para ir ao menu principal, aperte na logo ZIGGY!</em></p>
     </footer>
-
 </body>
 
 </html>
