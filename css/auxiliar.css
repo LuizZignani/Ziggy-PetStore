@@ -1,0 +1,102 @@
+.logo_ziggy {
+    text-align: left;
+    transition: 500ms;
+}
+
+.logo_ziggy:hover {
+    transition: 500ms;
+    transform: scale(1.1);
+    text-shadow: 1px 1px 1px black;
+}
+
+.nav-item {
+    color: black;
+    transition: 500ms;
+    border-radius: 10px 15px 10px 15px;
+}
+
+.nav-item:hover {
+    transition: 500ms;
+    transform: scale(1.1);
+    background-color: rgb(202, 231, 255);
+    box-shadow: 2px 2px 5px rgb(153, 153, 153);
+}
+
+.nav-produto {
+    color: black;
+    transition: 500ms;
+    border-radius: 10px 15px 10px 15px;
+}
+
+.nav-produto:hover {
+    transition: 500ms;
+    transform: scale(1.01);
+    background-color: rgb(227, 245, 255);
+    box-shadow: 2px 2px 5px rgb(193, 193, 193);
+}
+
+.footer-cor {
+    background-color: rgb(243, 243, 243);
+}
+
+.textoPreto {
+    color: black;
+}
+
+.fundo-oferta {
+    background-color: rgb(242, 242, 242);
+}
+
+.justify-content-evenly {
+    gap: 1.5rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.nav-produto {
+    flex: 1 1 280px;
+    max-width: 340px;
+    min-width: 250px;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.nav-produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-produto p {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    margin-bottom: 0;
+}
+
+.produtos-em-destaque p,
+h4 {
+    font-size: 16px;
+}
+
+.produtos-em-destaque img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.subir-topo {
+    position: fixed;
+    bottom: 5rem;
+    right: 1rem;
+    cursor: pointer;
+    border-width: 0 !important;
+    transition: 500ms;
+}
+
+.subir-topo:hover {
+    transition: 500ms;
+    transform: scale(1.2);
+}
+
+li {
+    list-style-type: none;
+}
