@@ -100,3 +100,8 @@ h4 {
 li {
     list-style-type: none;
 }
+
+.footer{
+    position: bottom;
+    bottom: 0;
+}

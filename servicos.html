@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/auxiliar.css">
-    <link rel="shortcut icon" href="/Img/Z_BrowserIco.ico" type="image/x-icon">
-    <script src="/js/Acessibilidade.js"></script>
-    <script src="./js/envioFormulario.js"></script>
+    <link rel="shortcut icon" href="./Img/Z_BrowserIco.ico" type="image/x-icon">
+    <script src="./js/Acessibilidade.js"></script>
+    <script src="./js/enviarFormulario.js"></script>
     <title>Ziggy - Dê tudo e mais para seu pet!</title>
 </head>
 
@@ -47,232 +47,316 @@
                 height=60px>
         </button>
     </div>
+    <h2 id="textoFormulario1" style="display: none; text-align: center; margin: 5%;">Obrigado por agendar! <br>
+        Entraremos em contato para mais detalhes!</h2>
 
+    <div id="paginaFormulario" style="display: block;">
 
-    <section class="container justify-content-center text-center pt-2 fundo-oferta">
-        <h3>Oferta de boas-vindas!</h3>
-        <p>Ganhe <strong>25% de desconto</strong> no primeiro serviço de banho e tosa!</p>
-    </section>
+        <section class="container justify-content-center text-center pt-2 fundo-oferta">
+            <h3>Oferta de boas-vindas!</h3>
+            <p>Ganhe <strong>25% de desconto</strong> no primeiro serviço de banho e tosa!</p>
+        </section>
 
-    <section class="container justify-content-left text-left">
-        <div>
-            <h2>Banho e tosa especializado para seu pet!</h2>
-            <p>Nosso banho e tosa é devidamente preparado pelos nossos especialistas e profissionais veterinários para o
-                seu pet,
-                seja
-                ele um cachorro, gato, coelho, hamster, qualquer um. Aqui não discriminamos! <a
-                    href="./servicos.html#:~:text=Tipos%20de%20pets%20aceitos">Consulte a lista de pets aceitos.</a></p>
-            <p>Desde um banho e tosa simples, a um banho e tosa totalmente especial com tratamentos de pelagem, pulgas e
-                carrapatos
-                para o seu pet do jeito que queira, de acordo com a situação de seu pet.</p>
-        </div>
+        <section class="container justify-content-left text-left">
+            <div>
+                <h2>Banho e tosa especializado para seu pet!</h2>
+                <p>Nosso banho e tosa é devidamente preparado pelos nossos especialistas e profissionais veterinários
+                    para o
+                    seu pet,
+                    seja
+                    ele um cachorro, gato, coelho, hamster, qualquer um. Aqui não discriminamos! <a
+                        href="./servicos.html#:~:text=Tipos%20de%20pets%20aceitos">Consulte a lista de pets aceitos.</a>
+                </p>
+                <p>Desde um banho e tosa simples, a um banho e tosa totalmente especial com tratamentos de pelagem,
+                    pulgas e
+                    carrapatos
+                    para o seu pet do jeito que queira, de acordo com a situação de seu pet.</p>
+            </div>
 
-        <div>
-            <h4>Banho e tosa</h4>
-            <h4>R$80,00</h4>
-            <p>Banho e tosa simples, deixando seu pet cheiroso e tosado, com o nível de tosagem escolhido por você, e o
-                perfume.</p>
-        </div>
-
-        <div>
-            <h4>Banho</h4>
-            <h4>R$50,00</h4>
-            <p>Um banho refrescante e cheiroso para o seu pet, com todo o cuidado devido pelos nossos profissionais.</p>
-        </div>
-        <div>
-            <h4>Tosa</h4>
-            <h4>R$50,00</h4>
-            <p>Tosagem do pelo de seu pet, o deixando estiloso e bonito, com todo o cuidado. Você pode escolher o tanto
-                que tosem seu pet.</p>
-        </div>
-
-        <div>
-            <h4>Opções adicionais (depende do tipo de pet)</h4>
-            <ul class="d-flex">
-                <li><strong>Tratamento de pelagem</strong></li>
-                <ul class="d-flex">
-                    <li>Seu pet terá um tratamento de pelagem, com orientações de nossos especialistas veterinários.
-                        Trataremos com a pelagem de seu pet, deixando-o ricos em vitaminas, proporcionando pelos sedosos
-                        naturalmente, e eliminando pulgas ou carrapatos que tenha.</li>
-                    <li><strong>+ R$60,00</strong></li>
-                </ul>
-                <li><strong>Escolha de perfume</strong></li>
-                <ul>
-                    <li>Queira que seu pet tenha um cheirinho de morango, lavanda, baunilha ou qualquer? Você pode
-                        escolher o perfume que ele tenha! Todos os perfumes não irritam ou causam alergias ao seu pet.
-                    </li>
-                    <li><strong>+ R$30,00</strong></li>
-                </ul>
-                <li><strong>Cuidados bocais essenciais</strong></li>
-                <ul>
-                    <li>Faremos a escovação bocal de seu pet, prevenindo a saude bocal contra o acúmulo de tártaro, mau
-                        hálito e infecções, com orientações de nossos especialistas veterinários.</li>
-                    <li><strong>+ R$50,00</strong></li>
-                </ul>
-            </ul>
-        </div>
-        <div>
-            <h4>Telebusca</h4>
-            <p>Possuimos serviço de telebusca do seu pet a domicílio, para não se preocupar de trazer seu pet até nós!
-                Valores da telebusca variam de acordo com seu
-                endereço.</p>
-        </div>
-        <div>
-            <h4>Agendamento</h4>
-            <p>Para fazer o seu agendamento do serviço de banho e tosa, com telebusca ou entrega do pet no local, é
-                preciso escolher o dia e o horário para o serviço.</p>
-            <p>O agendamento do serviço pode ser feito aqui no site, por mensagem via whatsapp ou por ligação no nosso
-                número.</p>
-        </div>
-    </section>
-
-    <div class="formulario-cadastro container justify-content-left text-left bg-light">
-        <form id="formularioCadastro" action= "javascript:enviarFormularioParaEmailCadastrado()" method="POST">
-            <fieldset>
-                <legend>Dados Pessoais</legend>
-                <label>Nome:</label>
-                <input type="text" name="Nome" placeholder="Nome Completo" class="class.class_input_name" required>
-                <label>Email:</label>
-                <input type="email" name="Email" placeholder="Digite o Email" class="class_input_email" required>
-                <label>CPF:</label>
-                <input type="text" name="CPF" placeholder="Digite o CPF" pattern="[0-9]{11}" required>
-                <label>Data de Nascimento:</label>
-                <input type="text" name="Nascimento" placeholder="DDMMAAAA" pattern="[0-9]{8}" required>
-                <label>Masculino</label>
-                <input type="radio" volume="masculino">
-                <label>Feminino</label>
-                <input type="radio" volume="feminino">
-                <br><br>
-                <label>Estado Civil:</label>
-                <select name="EstadoCivil">
-                    <option value="solteiro">Solteiro(a)</option>
-                    <option value="casado">Casado(a)</option>
-                    <option value="divorciado">Divorciado(a)</option>
-                    <option value="viuvo">Viuvo(a)</option>
-                    <option value="união estável">União Estável</option>
-                    <option value="outro">Outros</option>
-                </select>
-                <label>Renda Mensal (opcional):</label>
-                <input type="text" name="rendamensal" placeholder="Digite a renda">
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>Endereço</legend>
-                <label>Logradouro:</label>
-                <input type="text" name="logradouro" placeholder="Nome da rua" class="class_input_name" required>
-                <label>Número:</label>
-                <input type="text" name="numero" placeholder="Número" required>
-                <label>Complemento:</label>
-                <input type="text" name="Complemento" placeholder="Apto, Bloco, Prédio">
-                <br>
-                <br>
-                <label>Estado:</label>
-                <select name="estado">
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="GO">Goias</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RR">Roraima</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                </select>
-                <label>Cidade:</label>
-                <input type="text" name="cidade" placeholder="Informe a cidade" required>
-            </fieldset>
-            <br>
-            <fieldset>
-                <legend>Dados do Pet</legend>
-                <label>Nome do pet:</label>
-                <input type="text" name="nomepet" placeholder="Nome do pet" required>
-                <label>Raça:</label>
-                <select name="raça" id="">
-                    <option value="">Selecione a raça</option>
-                    <option value="cachorro">Cachorro</option>
-                    <option value="gato">Gato</option>
-                    <option value="coelho">Coelho</option>
-                    <option value="hamster">Hamster</option>
-                    <option value="rato">Rato</option>
-                    <option value="porquinho-da-india">Porquinho da India</option>
-                    <option value="tartaruga">Tartaruga</option>
-                </select>
-                <label>Data de nascimento</label>
-                <input type="text" name="nascimento_pet" placeholder="DDMMAAAA" pattern="[0-9]{8}">
-                <label>Sexo:</label>
-                <select name="sexopet">
-                    <option value="pet_macho">Macho</option>
-                    <option value="pet_femea">Fêmea</option>
-                </select>
-            </fieldset>
-            <br><br>
-            <fieldset>
-                <legend>Agendar</legend>
-                <label>Data</label>
-                <input type="datetime-local">
-                <label>Tipo de serviço:</label>
-                <select name="tipo_servico">
-                    <option value="banho e tosa">Banho e Tosa</option>
-                    <option value="banho">Banho</option>
-                    <option value="tosa">Tosa</option>
-                </select>
-                <br>
-                <label>Serviços adicionais:</label>
-                <div class="d-flex flex-column">
-                    <label><input type="checkbox" name="servico_adicional" value="tratamento_pelagem"> Tratamento de
-                        pelagem</label>
-                    <label><input type="checkbox" name="servico_adicional" value="cuidados_bocais"> Cuidados bocais
-                        essenciais</label>
+            <div class="d-flex justify-content-evenly">
+                <div class="border px-5 mx-5 justify-content-evenly text-center nav-produto">
+                    <h4>Banho e tosa</h4>
+                    <h4>R$80,00</h4>
+                    <p>Banho e tosa simples, deixando seu pet cheiroso e tosado, com o nível de tosagem escolhido por
+                        você,
+                        e o
+                        perfume.</p>
                 </div>
-                <label>Escolha de perfume</label>
-                <select name="perfume_escolha">
-                    <option value="Normal">Normal</option>
-                    <option value="lavanda">Lavanda</option>
-                    <option value="baunilha">Baunilha</option>
-                    <option value="rosa">Rosa</option>
-                    <option value="laranja">Laranja</option>
-                    <option value="uva">Uva</option>
-                </select>
-            </fieldset>
-            <center>
-                <label>Envio dos dados cadastrais</label>
-                <input id="formSubmit" class="class_botao_enviar" type="submit">
-            </center>
-            <br><br>
-        </form>
-    </div>
 
-    <section class="container text-left">
-        <div>
-            <h2>Tipos de pets aceitos</h2>
-            <ul>
-                <li>Cachorros</li>
-                <li>Gatos</li>
-                <li>Coelhos</li>
-                <li>Hamsters</li>
-                <li>Ratos</li>
-                <li>Porquinhos da india</li>
-                <li>Tartarugas</li>
-            </ul>
+                <div class="border px-5 mx-5 justify-content-evenly text-center nav-produto">
+                    <h4>Banho</h4>
+                    <h4>R$50,00</h4>
+                    <p>Um banho refrescante e cheiroso para o seu pet, com todo o cuidado devido pelos nossos
+                        profissionais.
+                    </p>
+                </div>
+                <div class="border px-5 mx-5 justify-content-evenly text-center nav-produto">
+                    <h4>Tosa</h4>
+                    <h4>R$50,00</h4>
+                    <p>Tosagem do pelo de seu pet, o deixando estiloso e bonito, com todo o cuidado. Você pode escolher
+                        o
+                        tanto
+                        que tosem seu pet.</p>
+                </div>
+            </div>
+            <div>
+                <center>
+                    <h4 class="p-5 m-5">Opções adicionais (depende do tipo de pet)</h4>
+                </center>
+                <div class="d-flex justify-content-evenly">
+                    <div class="border px-5 mx-5 justify-content-evenly text-center nav-produto">
+                        <p><strong>Tratamento de pelagem</strong></p>
+                        <p>Seu pet terá um tratamento de pelagem, com orientações de nossos especialistas veterinários.
+                            Trataremos com a pelagem de seu pet, deixando-o ricos em vitaminas, proporcionando pelos
+                            sedosos
+                            naturalmente, e eliminando pulgas ou carrapatos que tenha.</p>
+                        <p><strong>+ R$60,00</strong></p>
+                    </div>
+                    <div class="border px-5 mx-5 justify-content-evenly text-center nav-produto">
+                        <p><strong>Escolha de perfume</strong></p>
+                        <p>Queira que seu pet tenha um cheirinho de morango, lavanda, baunilha ou qualquer? Você pode
+                            escolher o perfume que ele tenha! Todos os perfumes não irritam ou causam alergias ao seu
+                            pet.
+                        </p>
+                        <p><strong>+ R$30,00</strong></p>
+                    </div>
+                    <div class="border px-5 mx-5 justify-content-evenly text-center nav-produto">
+                        <p><strong>Cuidados bocais essenciais</strong></p>
+                        <p>Faremos a escovação bocal de seu pet, prevenindo a saude bocal contra o acúmulo de tártaro,
+                            mau
+                            hálito e infecções, com orientações de nossos especialistas veterinários.</p>
+                        <p><strong>+ R$50,00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-5">
+                <h4>Telebusca</h4>
+                <p>Possuimos serviço de telebusca do seu pet a domicílio, para não se preocupar de trazer seu pet até
+                    nós!
+                    Valores da telebusca variam de acordo com seu
+                    endereço.</p>
+            </div>
+            <div>
+                <h4>Agendamento</h4>
+                <p>Para fazer o seu agendamento do serviço de banho e tosa, com telebusca ou entrega do pet no local, é
+                    preciso escolher o dia e o horário para o serviço.</p>
+                <p>O agendamento do serviço pode ser feito aqui no site, por mensagem via whatsapp ou por ligação no
+                    nosso
+                    número.</p>
+            </div>
+        </section>
+
+        <div class="formulario-cadastro container justify-content-left text-left bg-light">
+            <br>
+            <form id="formularioServico" action="javascript:enviarFormulario()" method="POST" style="display: display;">
+                <fieldset class="form-group">
+                    <legend>Dados Pessoais</legend>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Nome:</label>
+                            <input type="text" name="Nome" placeholder="Nome Completo" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Email:</label>
+                            <input type="email" name="Email" placeholder="Digite o Email" class="form-control" required>
+                        </div>
+                        <div class="col-md-4 ">
+                            <label>CPF:</label>
+                            <input type="text" name="CPF" placeholder="Digite o CPF" pattern="[0-9]{11}"
+                                class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Data de Nascimento:</label>
+                            <input type="text" name="Nascimento" placeholder="DDMMAAAA" pattern="[0-9]{8}"
+                                class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Estado Civil:</label>
+                            <select name="EstadoCivil" class="custom-select form-control" required>
+                                <option selected>Escolha um estado civil</option>
+                                <option value="solteiro">Solteiro(a)</option>
+                                <option value="casado">Casado(a)</option>
+                                <option value="divorciado">Divorciado(a)</option>
+                                <option value="viuvo">Viuvo(a)</option>
+                                <option value="união estável">União Estável</option>
+                                <option value="outro">Outros</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Renda Mensal (opcional):</label>
+                            <input type="text" name="rendamensal" placeholder="Digite a renda" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Sexo:</label>
+                            <select name="Sexo" class="custom-select form-control" required>
+                                <option selected>Escolha uma opção</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="outro">Outros</option>
+                            </select>
+                        </div>
+                </fieldset>
+                <br><br>
+                <fieldset class="form-group">
+                    <legend>Endereço</legend>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Logradouro:</label>
+                            <input type="text" name="logradouro" placeholder="Nome da rua" class="form-control"
+                                required>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Número:</label>
+                            <input type="text" name="numero" placeholder="Número" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Complemento:</label>
+                            <input type="text" name="Complemento" placeholder="Apto, Bloco, Prédio"
+                                class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Estado:</label>
+                            <select name="estado" class="custom-select form-control" required>
+                                <option selected>Escolha um estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="GO">Goias</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RR">Roraima</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Cidade:</label>
+                            <input type="text" name="cidade" placeholder="Informe a cidade" class="form-control"
+                                required>
+                        </div>
+                </fieldset>
+                <br>
+                <br>
+                <fieldset class="form-group">
+                    <legend>Dados do Pet</legend>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Nome do pet:</label>
+                            <input type="text" name="nomepet" placeholder="Nome do pet" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Raça:</label>
+                            <select name="raça" id="" class="custom-select form-control" required>
+                                <option value="" selected>Selecione a raça</option>
+                                <option value="cachorro">Cachorro</option>
+                                <option value="gato">Gato</option>
+                                <option value="coelho">Coelho</option>
+                                <option value="hamster">Hamster</option>
+                                <option value="rato">Rato</option>
+                                <option value="porquinho-da-india">Porquinho da India</option>
+                                <option value="tartaruga">Tartaruga</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Data de nascimento</label>
+                            <input type="text" name="nascimento_pet" placeholder="DDMMAAAA" pattern="[0-9]{8}"
+                                class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Sexo:</label>
+                            <select name="sexopet" class="form-control custom-select" required>
+                                <option value="" selected>Selecione o sexo</option>
+                                <option value="pet_macho">Macho</option>
+                                <option value="pet_femea">Fêmea</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <br><br>
+                <fieldset class="form-group">
+                    <legend>Agendar</legend>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Data</label>
+                            <input type="datetime-local" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Tipo de serviço:</label>
+                            <select name="tipo_servico" class="form-control" required>
+                                <option value="" selected>Selecione o tipo de serviço</option>
+                                <option value="banho e tosa">Banho e Tosa</option>
+                                <option value="banho">Banho</option>
+                                <option value="tosa">Tosa</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Meio de transporte</label>
+                            <select name="meio_transporte" class="form-control" required>
+                                <option value="" selected>Selecione o meio de transporte</option>
+                                <option value="Telebusca">Telebusca</option>
+                                <option value="Trazer">Levar e buscar</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Serviços adicionais:</label>
+                            <div class="d-flex flex-column">
+                                <label><input type="checkbox" name="servico_adicional" value="tratamento_pelagem">
+                                    Tratamento de
+                                    pelagem</label>
+                                <label><input type="checkbox" name="servico_adicional" value="cuidados_bocais"> Cuidados
+                                    bocais
+                                    essenciais</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Escolha de perfume</label>
+                            <select name="perfume_escolha" class="form-control">
+                                <option value="Normal" selected>Normal</option>
+                                <option value="lavanda">Lavanda</option>
+                                <option value="baunilha">Baunilha</option>
+                                <option value="rosa">Rosa</option>
+                                <option value="laranja">Laranja</option>
+                                <option value="uva">Uva</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <center><input id="formSubmit" class="btn btn-primary my-1" type="submit"></center>
         </div>
-    </section>
+        </fieldset>
+        </form>
 
+        <section class="container text-left">
+            <div>
+                <h2>Tipos de pets aceitos</h2>
+                <ul>
+                    <li>Cachorros</li>
+                    <li>Gatos</li>
+                    <li>Coelhos</li>
+                    <li>Hamsters</li>
+                    <li>Ratos</li>
+                    <li>Porquinhos da india</li>
+                    <li>Tartarugas</li>
+                </ul>
+            </div>
+        </section>
+    </div>
     <footer class="footer-cor">
         <section class="container d-flex justify-content-center text-center py-3 mb-3">
             <section class="container">
